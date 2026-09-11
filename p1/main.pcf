@@ -1,0 +1,9 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Sep 11 08:29:15 2026
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "pulso_divisor" LOCATE = SITE "U15" LEVEL 1;
+COMP "RESET" LOCATE = SITE "T10" LEVEL 1;
+SCHEMATIC END;
+

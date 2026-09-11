@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\ESCOM\Desktop\practicas_temporal\p1\main.ncd
+OUTFILE=C:\Users\ESCOM\Desktop\practicas_temporal\p1\main.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\ESCOM\Desktop\practicas_temporal\p1
+LICENSE=WebPack
+USER_INFO=__0_0_0
