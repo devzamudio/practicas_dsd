@@ -1,0 +1,5 @@
+verilog work "flipflop_jk.v"
+verilog work "divisor.v"
+verilog work "main.v"
+verilog work "main_tb.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

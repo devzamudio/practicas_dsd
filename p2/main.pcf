@@ -1,4 +1,24 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Sep 18 08:17:22 2026
+// Written by: Map P.20131013 on Tue Sep 22 07:30:19 2026
 //! **************************************************************************
+
+SCHEMATIC START;
+COMP "pulso_top" LOCATE = SITE "T11" LEVEL 1;
+COMP "nq_top" LOCATE = SITE "N11" LEVEL 1;
+COMP "q_top" LOCATE = SITE "R11" LEVEL 1;
+COMP "clk_top" LOCATE = SITE "V10" LEVEL 1;
+COMP "reset_top" LOCATE = SITE "T10" LEVEL 1;
+COMP "t_top" LOCATE = SITE "T9" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "div/pulso" BEL "div/contador_0" BEL
+        "div/contador_1" BEL "div/contador_2" BEL "div/contador_3" BEL
+        "div/contador_4" BEL "div/contador_5" BEL "div/contador_6" BEL
+        "div/contador_7" BEL "div/contador_8" BEL "div/contador_9" BEL
+        "div/contador_10" BEL "div/contador_11" BEL "div/contador_12" BEL
+        "div/contador_13" BEL "div/contador_14" BEL "div/contador_15" BEL
+        "div/contador_16" BEL "div/contador_17" BEL "div/contador_18" BEL
+        "div/contador_19" BEL "div/contador_20" BEL "div/contador_21" BEL
+        "div/contador_22" BEL "div/contador_23" BEL "div/contador_24" BEL
+        "div/contador_25" BEL "clk_top_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
 

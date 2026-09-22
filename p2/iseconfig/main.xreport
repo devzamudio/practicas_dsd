@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2026-09-18T07:47:38</DateModified>
+  <DateModified>2026-09-22T08:06:45</DateModified>
   <ModuleName>main</ModuleName>
-  <SummaryTimeStamp>2026-09-18T07:40:10</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/ESCOM/Desktop/temporal_p2/p2/iseconfig/main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/ESCOM/Desktop/temporal_p2/p2</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2026-09-22T07:30:42</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/ESCOM/Desktop/practicas_dsd-main/p2/iseconfig/main.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/ESCOM/Desktop/practicas_dsd-main/p2\</ImplementationReportsDirectory>
   <DateInitialized>2026-09-18T07:09:58</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

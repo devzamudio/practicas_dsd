@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: main.prj
 
@@ -105,11 +105,11 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\ESCOM\Desktop\temporal_p2\p2\flipflop_t.v" into library work
+Analyzing Verilog file "C:\Users\ESCOM\Desktop\practicas_dsd-main\p2\flipflop_t.v" into library work
 Parsing module <flipflop_t>.
-Analyzing Verilog file "C:\Users\ESCOM\Desktop\temporal_p2\p2\divisor.v" into library work
+Analyzing Verilog file "C:\Users\ESCOM\Desktop\practicas_dsd-main\p2\divisor.v" into library work
 Parsing module <divisor>.
-Analyzing Verilog file "C:\Users\ESCOM\Desktop\temporal_p2\p2\main.v" into library work
+Analyzing Verilog file "C:\Users\ESCOM\Desktop\practicas_dsd-main\p2\main.v" into library work
 Parsing module <main>.
 
 =========================================================================
@@ -119,24 +119,22 @@ Parsing module <main>.
 Elaborating module <main>.
 
 Elaborating module <divisor>.
-WARNING:HDLCompiler:413 - "C:\Users\ESCOM\Desktop\temporal_p2\p2\divisor.v" Line 40: Result of 27-bit expression is truncated to fit in 26-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\ESCOM\Desktop\practicas_dsd-main\p2\divisor.v" Line 40: Result of 27-bit expression is truncated to fit in 26-bit target.
 
 Elaborating module <flipflop_t>.
-WARNING:HDLCompiler:634 - "C:\Users\ESCOM\Desktop\temporal_p2\p2\main.v" Line 37: Net <pulso> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <main>.
-    Related source file is "C:\Users\ESCOM\Desktop\temporal_p2\p2\main.v".
-WARNING:Xst:653 - Signal <pulso> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Related source file is "C:\Users\ESCOM\Desktop\practicas_dsd-main\p2\main.v".
     Summary:
 	no macro.
 Unit <main> synthesized.
 
 Synthesizing Unit <divisor>.
-    Related source file is "C:\Users\ESCOM\Desktop\temporal_p2\p2\divisor.v".
+    Related source file is "C:\Users\ESCOM\Desktop\practicas_dsd-main\p2\divisor.v".
     Found 26-bit register for signal <contador>.
     Found 1-bit register for signal <pulso>.
     Found 26-bit adder for signal <contador[25]_GND_2_o_add_1_OUT> created at line 40.
@@ -147,7 +145,7 @@ Synthesizing Unit <divisor>.
 Unit <divisor> synthesized.
 
 Synthesizing Unit <flipflop_t>.
-    Related source file is "C:\Users\ESCOM\Desktop\temporal_p2\p2\flipflop_t.v".
+    Related source file is "C:\Users\ESCOM\Desktop\practicas_dsd-main\p2\flipflop_t.v".
     Found 1-bit register for signal <nq>.
     Found 1-bit register for signal <q>.
     Summary:
@@ -174,8 +172,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <nq> (without init value) has a constant value of 1 in block <fft>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <q> (without init value) has a constant value of 0 in block <fft>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <divisor>.
 The following registers are absorbed into counter <contador>: 1 register on signal <contador>.
@@ -197,33 +193,8 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <nq> (without init value) has a constant value of 1 in block <flipflop_t>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <q> (without init value) has a constant value of 0 in block <flipflop_t>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <main> ...
-WARNING:Xst:1710 - FF/Latch <div/contador_25> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_24> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_23> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_22> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_21> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_20> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_19> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_18> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_17> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_16> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_15> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_14> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_13> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_12> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_11> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_10> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_9> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_8> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_7> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_6> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_5> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_4> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <div/contador_3> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -235,8 +206,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 4
- Flip-Flops                                            : 4
+# Registers                                            : 29
+ Flip-Flops                                            : 29
 
 =========================================================================
 
@@ -259,20 +230,23 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 14
+# BELS                             : 114
 #      GND                         : 1
 #      INV                         : 1
-#      LUT1                        : 2
-#      LUT4                        : 4
-#      MUXCY                       : 2
+#      LUT1                        : 25
+#      LUT2                        : 28
+#      LUT6                        : 7
+#      MUXCY                       : 25
 #      VCC                         : 1
-#      XORCY                       : 3
-# FlipFlops/Latches                : 4
-#      FDC                         : 4
+#      XORCY                       : 26
+# FlipFlops/Latches                : 29
+#      FDC                         : 27
+#      FDCE                        : 1
+#      FDP                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 4
-#      IBUF                        : 1
+# IO Buffers                       : 5
+#      IBUF                        : 2
 #      OBUF                        : 3
 
 Device utilization summary:
@@ -282,20 +256,20 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:               4  out of  18224     0%  
- Number of Slice LUTs:                    7  out of   9112     0%  
-    Number used as Logic:                 7  out of   9112     0%  
+ Number of Slice Registers:              29  out of  18224     0%  
+ Number of Slice LUTs:                   61  out of   9112     0%  
+    Number used as Logic:                61  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     11
-   Number with an unused Flip Flop:       7  out of     11    63%  
-   Number with an unused LUT:             4  out of     11    36%  
-   Number of fully used LUT-FF pairs:     0  out of     11     0%  
-   Number of unique control sets:         1
+ Number of LUT Flip Flop pairs used:     61
+   Number with an unused Flip Flop:      32  out of     61    52%  
+   Number with an unused LUT:             0  out of     61     0%  
+   Number of fully used LUT-FF pairs:    29  out of     61    47%  
+   Number of unique control sets:         3
 
 IO Utilization: 
  Number of IOs:                           6
- Number of bonded IOBs:                   5  out of    232     2%  
+ Number of bonded IOBs:                   6  out of    232     2%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -321,8 +295,10 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk_top                            | BUFGP                  | 4     |
+div/pulso                          | NONE(fft/q)            | 2     |
+clk_top                            | BUFGP                  | 27    |
 -----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -332,9 +308,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 2.625ns (Maximum Frequency: 380.974MHz)
-   Minimum input arrival time before clock: 2.335ns
-   Maximum output required time after clock: 3.634ns
+   Minimum period: 3.998ns (Maximum Frequency: 250.150MHz)
+   Minimum input arrival time before clock: 2.901ns
+   Maximum output required time after clock: 3.701ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -342,55 +318,94 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk_top'
-  Clock period: 2.625ns (frequency: 380.974MHz)
-  Total number of paths / destination ports: 19 / 4
+Timing constraint: Default period analysis for Clock 'div/pulso'
+  Clock period: 1.507ns (frequency: 663.460MHz)
+  Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Delay:               2.625ns (Levels of Logic = 5)
-  Source:            div/contador_0 (FF)
-  Destination:       div/contador_2 (FF)
+Delay:               1.507ns (Levels of Logic = 1)
+  Source:            fft/q (FF)
+  Destination:       fft/q (FF)
+  Source Clock:      div/pulso rising
+  Destination Clock: div/pulso rising
+
+  Data Path: fft/q to fft/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.447   0.755  fft/q (fft/q)
+     LUT2:I0->O            1   0.203   0.000  fft/t_q_XOR_33_o1 (fft/t_q_XOR_33_o)
+     FDC:D                     0.102          fft/q
+    ----------------------------------------
+    Total                      1.507ns (0.752ns logic, 0.755ns route)
+                                       (49.9% logic, 50.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_top'
+  Clock period: 3.998ns (frequency: 250.150MHz)
+  Total number of paths / destination ports: 1054 / 28
+-------------------------------------------------------------------------
+Delay:               3.998ns (Levels of Logic = 3)
+  Source:            div/contador_8 (FF)
+  Destination:       div/contador_12 (FF)
   Source Clock:      clk_top rising
   Destination Clock: clk_top rising
 
-  Data Path: div/contador_0 to div/contador_2
+  Data Path: div/contador_8 to div/contador_12
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              5   0.447   0.714  div/contador_0 (div/contador_0)
-     INV:I->O              1   0.206   0.000  div/Mcount_contador_lut<0>_INV_0 (div/Mcount_contador_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  div/Mcount_contador_cy<0> (div/Mcount_contador_cy<0>)
-     MUXCY:CI->O           0   0.019   0.000  div/Mcount_contador_cy<1> (div/Mcount_contador_cy<1>)
-     XORCY:CI->O           1   0.180   0.580  div/Mcount_contador_xor<2> (Result<2>)
-     LUT4:I3->O            1   0.205   0.000  div/Mcount_contador_eqn_21 (div/Mcount_contador_eqn_2)
-     FDC:D                     0.102          div/contador_2
+     FDC:C->Q              2   0.447   0.981  div/contador_8 (div/contador_8)
+     LUT6:I0->O            3   0.203   0.898  div/GND_2_o_GND_2_o_equal_1_o<25>4 (div/GND_2_o_GND_2_o_equal_1_o<25>3)
+     LUT6:I2->O           14   0.203   0.958  div/GND_2_o_GND_2_o_equal_1_o<25>5 (div/GND_2_o_GND_2_o_equal_1_o)
+     LUT2:I1->O            1   0.205   0.000  div/Mcount_contador_eqn_251 (div/Mcount_contador_eqn_25)
+     FDC:D                     0.102          div/contador_25
     ----------------------------------------
-    Total                      2.625ns (1.331ns logic, 1.294ns route)
-                                       (50.7% logic, 49.3% route)
+    Total                      3.998ns (1.160ns logic, 2.838ns route)
+                                       (29.0% logic, 71.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'div/pulso'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              2.901ns (Levels of Logic = 1)
+  Source:            reset_top (PAD)
+  Destination:       fft/q (FF)
+  Destination Clock: div/pulso rising
+
+  Data Path: reset_top to fft/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   1.222   1.249  reset_top_IBUF (reset_top_IBUF)
+     FDP:PRE                   0.430          fft/nq
+    ----------------------------------------
+    Total                      2.901ns (1.652ns logic, 1.249ns route)
+                                       (57.0% logic, 43.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_top'
-  Total number of paths / destination ports: 4 / 4
+  Total number of paths / destination ports: 27 / 27
 -------------------------------------------------------------------------
-Offset:              2.335ns (Levels of Logic = 1)
+Offset:              2.901ns (Levels of Logic = 1)
   Source:            reset_top (PAD)
-  Destination:       div/contador_0 (FF)
+  Destination:       div/pulso (FF)
   Destination Clock: clk_top rising
 
-  Data Path: reset_top to div/contador_0
+  Data Path: reset_top to div/pulso
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   1.222   0.683  reset_top_IBUF (reset_top_IBUF)
-     FDC:CLR                   0.430          div/contador_0
+     IBUF:I->O            29   1.222   1.249  reset_top_IBUF (reset_top_IBUF)
+     FDCE:CLR                  0.430          div/pulso
     ----------------------------------------
-    Total                      2.335ns (1.652ns logic, 0.683ns route)
-                                       (70.8% logic, 29.2% route)
+    Total                      2.901ns (1.652ns logic, 1.249ns route)
+                                       (57.0% logic, 43.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_top'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              3.634ns (Levels of Logic = 1)
+Offset:              3.701ns (Levels of Logic = 1)
   Source:            div/pulso (FF)
   Destination:       pulso_top (PAD)
   Source Clock:      clk_top rising
@@ -399,11 +414,30 @@ Offset:              3.634ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              2   0.447   0.616  div/pulso (div/pulso)
+     FDCE:C->Q             4   0.447   0.683  div/pulso (div/pulso)
      OBUF:I->O                 2.571          pulso_top_OBUF (pulso_top)
     ----------------------------------------
-    Total                      3.634ns (3.018ns logic, 0.616ns route)
-                                       (83.0% logic, 17.0% route)
+    Total                      3.701ns (3.018ns logic, 0.683ns route)
+                                       (81.6% logic, 18.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'div/pulso'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.668ns (Levels of Logic = 1)
+  Source:            fft/q (FF)
+  Destination:       q_top (PAD)
+  Source Clock:      div/pulso rising
+
+  Data Path: fft/q to q_top
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.447   0.650  fft/q (fft/q)
+     OBUF:I->O                 2.571          q_top_OBUF (q_top)
+    ----------------------------------------
+    Total                      3.668ns (3.018ns logic, 0.650ns route)
+                                       (82.3% logic, 17.7% route)
 
 =========================================================================
 
@@ -415,20 +449,28 @@ Clock to Setup on destination clock clk_top
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_top        |    2.625|         |         |         |
+clk_top        |    3.998|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock div/pulso
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+div/pulso      |    1.507|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.74 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.81 secs
  
 --> 
 
-Total memory usage is 4486456 kilobytes
+Total memory usage is 4486940 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   30 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

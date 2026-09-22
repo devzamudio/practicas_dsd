@@ -34,7 +34,7 @@ divisor div (
 );
 	 
 flipflop_t fft(
-	.clk(pulso),
+	.clk(pulso_top),
 	.reset(reset_top),
 	.t(t_top),
 	.q(q_top),

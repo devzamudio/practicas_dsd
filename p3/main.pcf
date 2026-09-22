@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Sep 22 08:16:56 2026
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "pulso_top" LOCATE = SITE "T11" LEVEL 1;
+COMP "nq_top" LOCATE = SITE "N11" LEVEL 1;
+COMP "j_top" LOCATE = SITE "V9" LEVEL 1;
+COMP "q_top" LOCATE = SITE "R11" LEVEL 1;
+COMP "clk_top" LOCATE = SITE "V10" LEVEL 1;
+COMP "k_top" LOCATE = SITE "T9" LEVEL 1;
+COMP "reset_top" LOCATE = SITE "T10" LEVEL 1;
+SCHEMATIC END;
+
