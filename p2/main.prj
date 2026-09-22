@@ -1,0 +1,3 @@
+verilog work "flipflop_t.v"
+verilog work "divisor.v"
+verilog work "main.v"
