@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/ESCOM/Desktop/temporal_p2/p2/tb_main_isim_beh.exe" -prj "C:/Users/ESCOM/Desktop/temporal_p2/p2/tb_main_beh.prj" "work.tb_main" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/practicas_dsd/p2/tb_main_isim_beh.exe" -prj "Z:/practicas_dsd/p2/tb_main_beh.prj" "work.tb_main" "work.glbl" 

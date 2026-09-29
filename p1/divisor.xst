@@ -1,6 +1,9 @@
-set -tmpdir "C:/Users/ESCOM/Desktop/practicas_temporal/p1/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/ESCOM/Desktop/practicas_temporal/p1/xst"
-run -compileonly yes
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn divisor.prj
+-ofn divisor
+-ofmt NGC
 -p xc6slx16-3-csg324
 -top divisor
 -opt_mode Speed
@@ -47,4 +50,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn divisor.prj

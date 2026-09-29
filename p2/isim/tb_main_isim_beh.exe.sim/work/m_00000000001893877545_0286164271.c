@@ -10,7 +10,7 @@
 /*  \___\/\___\                                                    */
 /***********************************************************************/
 
-/* This file is designed for use with ISim build 0x7708f090 */
+/* This file is designed for use with ISim build 0x8ef4fb42 */
 
 #define XSI_HIDE_SYMBOL_SPEC true
 #include "xsi.h"
@@ -25,7 +25,7 @@
 
 
 
-extern void work_m_00000000000650258233_0286164271_init()
+extern void work_m_00000000001893877545_0286164271_init()
 {
-	xsi_register_didat("work_m_00000000000650258233_0286164271", "isim/tb_main_isim_beh.exe.sim/work/m_00000000000650258233_0286164271.didat");
+	xsi_register_didat("work_m_00000000001893877545_0286164271", "isim/tb_main_isim_beh.exe.sim/work/m_00000000001893877545_0286164271.didat");
 }

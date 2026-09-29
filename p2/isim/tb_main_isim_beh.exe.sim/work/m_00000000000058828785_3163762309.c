@@ -10,7 +10,7 @@
 /*  \___\/\___\                                                    */
 /***********************************************************************/
 
-/* This file is designed for use with ISim build 0x7708f090 */
+/* This file is designed for use with ISim build 0x8ef4fb42 */
 
 #define XSI_HIDE_SYMBOL_SPEC true
 #include "xsi.h"
@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/ESCOM/Desktop/temporal_p2/p2/tb_main.v";
+static const char *ng0 = "//VBoxSvr/Virtualbox_Shared/practicas_dsd/p2/tb_main.v";
 static int ng1[] = {0, 0};
 static int ng2[] = {1, 0};
 
@@ -54,7 +54,7 @@ static void Always_47_0(char *t0)
     unsigned int t23;
     char *t24;
 
-LAB0:    t1 = (t0 + 3008U);
+LAB0:    t1 = (t0 + 1720U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
@@ -62,14 +62,14 @@ LAB0:    t1 = (t0 + 3008U);
 LAB3:    goto *t2;
 
 LAB2:    xsi_set_current_line(47, ng0);
-    t2 = (t0 + 2816);
+    t2 = (t0 + 1620);
     xsi_process_wait(t2, 5000LL);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
 LAB4:    xsi_set_current_line(47, ng0);
-    t4 = (t0 + 1928);
-    t5 = (t4 + 56U);
+    t4 = (t0 + 1104);
+    t5 = (t4 + 36U);
     t6 = *((char **)t5);
     memset(t3, 0, 8);
     t7 = (t6 + 4);
@@ -101,7 +101,7 @@ LAB9:    t22 = *((unsigned int *)t3);
     *((unsigned int *)t3) = (t22 & 1U);
     t23 = *((unsigned int *)t14);
     *((unsigned int *)t14) = (t23 & 1U);
-    t24 = (t0 + 1928);
+    t24 = (t0 + 1104);
     xsi_vlogvar_assign_value(t24, t3, 0, 0, 1);
     goto LAB2;
 
@@ -124,7 +124,7 @@ static void Initial_49_1(char *t0)
     char *t2;
     char *t3;
 
-LAB0:    t1 = (t0 + 3256U);
+LAB0:    t1 = (t0 + 1864U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
@@ -134,67 +134,67 @@ LAB3:    goto *t2;
 LAB2:    xsi_set_current_line(49, ng0);
 
 LAB4:    xsi_set_current_line(52, ng0);
-    t2 = (t0 + 3064);
+    t2 = (t0 + 1764);
     xsi_process_wait(t2, 100000LL);
     *((char **)t1) = &&LAB5;
 
 LAB1:    return;
 LAB5:    xsi_set_current_line(53, ng0);
     t2 = ((char*)((ng1)));
-    t3 = (t0 + 1928);
+    t3 = (t0 + 1104);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(54, ng0);
     t2 = ((char*)((ng1)));
-    t3 = (t0 + 1768);
+    t3 = (t0 + 1012);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(54, ng0);
     t2 = ((char*)((ng1)));
-    t3 = (t0 + 2088);
+    t3 = (t0 + 1196);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(54, ng0);
-    t2 = (t0 + 3064);
+    t2 = (t0 + 1764);
     xsi_process_wait(t2, 100000LL);
     *((char **)t1) = &&LAB6;
     goto LAB1;
 
 LAB6:    xsi_set_current_line(55, ng0);
     t2 = ((char*)((ng1)));
-    t3 = (t0 + 1768);
+    t3 = (t0 + 1012);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(55, ng0);
     t2 = ((char*)((ng2)));
-    t3 = (t0 + 2088);
+    t3 = (t0 + 1196);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(55, ng0);
-    t2 = (t0 + 3064);
+    t2 = (t0 + 1764);
     xsi_process_wait(t2, 100000LL);
     *((char **)t1) = &&LAB7;
     goto LAB1;
 
 LAB7:    xsi_set_current_line(56, ng0);
     t2 = ((char*)((ng2)));
-    t3 = (t0 + 1768);
+    t3 = (t0 + 1012);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(56, ng0);
     t2 = ((char*)((ng1)));
-    t3 = (t0 + 2088);
+    t3 = (t0 + 1196);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(56, ng0);
-    t2 = (t0 + 3064);
+    t2 = (t0 + 1764);
     xsi_process_wait(t2, 100000LL);
     *((char **)t1) = &&LAB8;
     goto LAB1;
 
 LAB8:    xsi_set_current_line(57, ng0);
     t2 = ((char*)((ng2)));
-    t3 = (t0 + 1768);
+    t3 = (t0 + 1012);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(57, ng0);
     t2 = ((char*)((ng2)));
-    t3 = (t0 + 2088);
+    t3 = (t0 + 1196);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(57, ng0);
-    t2 = (t0 + 3064);
+    t2 = (t0 + 1764);
     xsi_process_wait(t2, 100000LL);
     *((char **)t1) = &&LAB9;
     goto LAB1;

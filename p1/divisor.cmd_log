@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Z:/practicas_dsd/p1/divisor.xst" -ofn "Z:/practicas_dsd/p1/divisor.syr" 

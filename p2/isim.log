@@ -1,6 +1,6 @@
 ISim log file
-Running: C:\Users\ESCOM\Desktop\temporal_p2\p2\tb_main_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/ESCOM/Desktop/temporal_p2/p2/tb_main_isim_beh.wdb 
-ISim P.20131013 (signature 0x7708f090)
+Running: Z:\practicas_dsd\p2\tb_main_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb Z:/practicas_dsd/p2/tb_main_isim_beh.wdb 
+ISim P.20131013 (signature 0x8ef4fb42)
 This is a Full version of ISim.
 Time resolution is 1 ps
 # onerror resume
