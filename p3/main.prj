@@ -1,3 +1,2 @@
-verilog work "flipflop_jk.v"
-verilog work "divisor.v"
+verilog work "flipflop_d.v"
 verilog work "main.v"
