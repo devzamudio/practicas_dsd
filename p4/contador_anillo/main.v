@@ -21,14 +21,21 @@
 module main(
 	input clk_top,
 	input init_top,
-	output wire [3:0] q_top
+	output wire [3:0] q_top,
+	output pulso_top
     );
 	 
 wire feedback;
 assign feedback = q_top[3];
+
+divisor div(
+	.clk(clk_top),
+	.reset(init_top),
+	.pulso(pulso_top)
+);
 	 
 flipflop_d ffd0(
-	.clk(clk_top),
+	.clk(pulso_top),
 	.preset(init_top),
 	.reset(1'b0),
 	.d(feedback),
@@ -36,7 +43,7 @@ flipflop_d ffd0(
 );
 
 flipflop_d ffd1(
-	.clk(clk_top),
+	.clk(pulso_top),
 	.reset(init_top),
 	.preset(1'b0),
 	.d(q_top[0]),
@@ -44,7 +51,7 @@ flipflop_d ffd1(
 );
 
 flipflop_d ffd2(
-	.clk(clk_top),
+	.clk(pulso_top),
 	.reset(init_top),
 	.preset(1'b0),
 	.d(q_top[1]),
@@ -52,7 +59,7 @@ flipflop_d ffd2(
 );
 
 flipflop_d ffd3(
-	.clk(clk_top),
+	.clk(pulso_top),
 	.reset(init_top),
 	.preset(1'b0),
 	.d(q_top[2]),

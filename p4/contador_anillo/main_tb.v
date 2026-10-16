@@ -30,12 +30,14 @@ module main_tb;
 
 	// Outputs
 	wire [3:0] q_top;
+	wire pulso_top;
 
 	// Instantiate the Unit Under Test (UUT)
 	main uut (
 		.clk_top(clk_top), 
 		.init_top(init_top), 
-		.q_top(q_top)
+		.q_top(q_top),
+		.pulso_top(pulso_top)
 	);
 	
 	always #5 clk_top = ~clk_top;
@@ -46,9 +48,9 @@ module main_tb;
 		init_top = 1;
 
 		// Wait 100 ns for global reset to finish
-		#15;
+		#500;
 		
-		init_top = 0; 		#100;
+		init_top = 0; 		#500;
 		
 		$stop;
         

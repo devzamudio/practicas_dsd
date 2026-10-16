@@ -21,22 +21,21 @@
 module main(
 		input clk_top,
 		input reset_top,
-		//output pulso_top,
+		output pulso_top,
 		output wire [2:0] c_top
     );
 	 
 wire [2:0] qn_top;
 
-/*	 
+
 divisor div (
 	.clk(clk_top),
 	.reset(reset_top),
 	.pulso(pulso_top)
 );
-*/
 	 
 flipflop_d ffd0(
-	.clk(clk_top),
+	.clk(pulso_top),
 	.reset(reset_top),
 	.d(qn_top[0]),
 	.q(c_top[0]),

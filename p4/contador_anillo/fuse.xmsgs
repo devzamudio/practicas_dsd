@@ -5,16 +5,16 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/ESCOM/Desktop/practicas_dsd-main/p4/contador_anillo/main.v" Line 30: Port <arg fmt="%s" index="1">nq</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/ESCOM/Desktop/practicas_dsd-main/p4/contador_anillo/main.v" Line 37: Port <arg fmt="%s" index="1">nq</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/ESCOM/Desktop/practicas_dsd-main/p4/contador_anillo/main.v" Line 38: Port <arg fmt="%s" index="1">nq</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/ESCOM/Desktop/practicas_dsd-main/p4/contador_anillo/main.v" Line 45: Port <arg fmt="%s" index="1">nq</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/ESCOM/Desktop/practicas_dsd-main/p4/contador_anillo/main.v" Line 46: Port <arg fmt="%s" index="1">nq</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/ESCOM/Desktop/practicas_dsd-main/p4/contador_anillo/main.v" Line 53: Port <arg fmt="%s" index="1">nq</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/ESCOM/Desktop/practicas_dsd-main/p4/contador_anillo/main.v" Line 54: Port <arg fmt="%s" index="1">nq</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/ESCOM/Desktop/practicas_dsd-main/p4/contador_anillo/main.v" Line 61: Port <arg fmt="%s" index="1">nq</arg> is not connected to this instance
 </msg>
 
 </messages>
