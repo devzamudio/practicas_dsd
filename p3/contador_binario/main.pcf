@@ -1,0 +1,13 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Oct 09 08:02:36 2026
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "pulso_top" LOCATE = SITE "T11" LEVEL 1;
+COMP "clk_top" LOCATE = SITE "V10" LEVEL 1;
+COMP "reset_top" LOCATE = SITE "B8" LEVEL 1;
+COMP "c_top<0>" LOCATE = SITE "V16" LEVEL 1;
+COMP "c_top<1>" LOCATE = SITE "U15" LEVEL 1;
+COMP "c_top<2>" LOCATE = SITE "V15" LEVEL 1;
+SCHEMATIC END;
+

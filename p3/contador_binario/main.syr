@@ -1,0 +1,609 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\ESCOM\Desktop\practicas_dsd-main\p3\flipflop_d.v" into library work
+Parsing module <flipflop_d>.
+Analyzing Verilog file "C:\Users\ESCOM\Desktop\practicas_dsd-main\p3\divisor.v" into library work
+Parsing module <divisor>.
+Analyzing Verilog file "C:\Users\ESCOM\Desktop\practicas_dsd-main\p3\main.v" into library work
+Parsing module <main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <main>.
+
+Elaborating module <divisor>.
+WARNING:HDLCompiler:413 - "C:\Users\ESCOM\Desktop\practicas_dsd-main\p3\divisor.v" Line 40: Result of 27-bit expression is truncated to fit in 26-bit target.
+
+Elaborating module <flipflop_d>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <main>.
+    Related source file is "C:\Users\ESCOM\Desktop\practicas_dsd-main\p3\main.v".
+    Summary:
+	no macro.
+Unit <main> synthesized.
+
+Synthesizing Unit <divisor>.
+    Related source file is "C:\Users\ESCOM\Desktop\practicas_dsd-main\p3\divisor.v".
+    Found 26-bit register for signal <contador>.
+    Found 1-bit register for signal <pulso>.
+    Found 26-bit adder for signal <contador[25]_GND_2_o_add_1_OUT> created at line 40.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <divisor> synthesized.
+
+Synthesizing Unit <flipflop_d>.
+    Related source file is "C:\Users\ESCOM\Desktop\practicas_dsd-main\p3\flipflop_d.v".
+    Found 1-bit register for signal <nq>.
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <flipflop_d> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 26-bit adder                                          : 1
+# Registers                                            : 8
+ 1-bit register                                        : 7
+ 26-bit register                                       : 1
+# Multiplexers                                         : 1
+ 26-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <divisor>.
+The following registers are absorbed into counter <contador>: 1 register on signal <contador>.
+Unit <divisor> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <main> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 33
+ Flip-Flops                                            : 33
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 115
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 25
+#      LUT2                        : 27
+#      LUT6                        : 6
+#      MUXCY                       : 25
+#      VCC                         : 1
+#      XORCY                       : 26
+# FlipFlops/Latches                : 33
+#      FDC                         : 30
+#      FDP                         : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 5
+#      IBUF                        : 1
+#      OBUF                        : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              33  out of  18224     0%  
+ Number of Slice LUTs:                   62  out of   9112     0%  
+    Number used as Logic:                62  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     65
+   Number with an unused Flip Flop:      32  out of     65    49%  
+   Number with an unused LUT:             3  out of     65     4%  
+   Number of fully used LUT-FF pairs:    30  out of     65    46%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    232     2%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+ffd1/nq                            | NONE(ffd2/q)           | 2     |
+ffd0/nq                            | NONE(ffd1/q)           | 2     |
+div/pulso                          | NONE(ffd0/q)           | 2     |
+clk_top                            | BUFGP                  | 27    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.964ns (Maximum Frequency: 252.296MHz)
+   Minimum input arrival time before clock: 2.957ns
+   Maximum output required time after clock: 3.701ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ffd1/nq'
+  Clock period: 1.950ns (frequency: 512.794MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               1.950ns (Levels of Logic = 1)
+  Source:            ffd2/nq (FF)
+  Destination:       ffd2/nq (FF)
+  Source Clock:      ffd1/nq rising
+  Destination Clock: ffd1/nq rising
+
+  Data Path: ffd2/nq to ffd2/nq
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              2   0.447   0.616  ffd2/nq (ffd2/nq)
+     INV:I->O              1   0.206   0.579  ffd2/d_INV_3_o1_INV_0 (ffd2/d_INV_3_o)
+     FDP:D                     0.102          ffd2/nq
+    ----------------------------------------
+    Total                      1.950ns (0.755ns logic, 1.195ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ffd0/nq'
+  Clock period: 2.016ns (frequency: 495.933MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               2.016ns (Levels of Logic = 1)
+  Source:            ffd1/nq (FF)
+  Destination:       ffd1/nq (FF)
+  Source Clock:      ffd0/nq rising
+  Destination Clock: ffd0/nq rising
+
+  Data Path: ffd1/nq to ffd1/nq
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              4   0.447   0.683  ffd1/nq (ffd1/nq)
+     INV:I->O              1   0.206   0.579  ffd1/d_INV_3_o1_INV_0 (ffd1/d_INV_3_o)
+     FDP:D                     0.102          ffd1/nq
+    ----------------------------------------
+    Total                      2.016ns (0.755ns logic, 1.261ns route)
+                                       (37.4% logic, 62.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'div/pulso'
+  Clock period: 2.016ns (frequency: 495.933MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               2.016ns (Levels of Logic = 1)
+  Source:            ffd0/nq (FF)
+  Destination:       ffd0/nq (FF)
+  Source Clock:      div/pulso rising
+  Destination Clock: div/pulso rising
+
+  Data Path: ffd0/nq to ffd0/nq
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              4   0.447   0.683  ffd0/nq (ffd0/nq)
+     INV:I->O              1   0.206   0.579  ffd0/d_INV_3_o1_INV_0 (ffd0/d_INV_3_o)
+     FDP:D                     0.102          ffd0/nq
+    ----------------------------------------
+    Total                      2.016ns (0.755ns logic, 1.261ns route)
+                                       (37.4% logic, 62.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_top'
+  Clock period: 3.964ns (frequency: 252.296MHz)
+  Total number of paths / destination ports: 1054 / 27
+-------------------------------------------------------------------------
+Delay:               3.964ns (Levels of Logic = 3)
+  Source:            div/contador_8 (FF)
+  Destination:       div/contador_0 (FF)
+  Source Clock:      clk_top rising
+  Destination Clock: clk_top rising
+
+  Data Path: div/contador_8 to div/contador_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.981  div/contador_8 (div/contador_8)
+     LUT6:I0->O            2   0.203   0.864  div/GND_2_o_GND_2_o_equal_1_o<25>4 (div/GND_2_o_GND_2_o_equal_1_o<25>3)
+     LUT6:I2->O           14   0.203   0.958  div/GND_2_o_GND_2_o_equal_1_o<25>5 (div/GND_2_o_GND_2_o_equal_1_o)
+     LUT2:I1->O            1   0.205   0.000  div/Mcount_contador_eqn_01 (div/Mcount_contador_eqn_0)
+     FDC:D                     0.102          div/contador_0
+    ----------------------------------------
+    Total                      3.964ns (1.160ns logic, 2.804ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ffd1/nq'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.957ns (Levels of Logic = 1)
+  Source:            reset_top (PAD)
+  Destination:       ffd2/q (FF)
+  Destination Clock: ffd1/nq rising
+
+  Data Path: reset_top to ffd2/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            33   1.222   1.305  reset_top_IBUF (reset_top_IBUF)
+     FDP:PRE                   0.430          ffd2/nq
+    ----------------------------------------
+    Total                      2.957ns (1.652ns logic, 1.305ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ffd0/nq'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.957ns (Levels of Logic = 1)
+  Source:            reset_top (PAD)
+  Destination:       ffd1/q (FF)
+  Destination Clock: ffd0/nq rising
+
+  Data Path: reset_top to ffd1/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            33   1.222   1.305  reset_top_IBUF (reset_top_IBUF)
+     FDP:PRE                   0.430          ffd1/nq
+    ----------------------------------------
+    Total                      2.957ns (1.652ns logic, 1.305ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'div/pulso'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.957ns (Levels of Logic = 1)
+  Source:            reset_top (PAD)
+  Destination:       ffd0/q (FF)
+  Destination Clock: div/pulso rising
+
+  Data Path: reset_top to ffd0/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            33   1.222   1.305  reset_top_IBUF (reset_top_IBUF)
+     FDP:PRE                   0.430          ffd0/nq
+    ----------------------------------------
+    Total                      2.957ns (1.652ns logic, 1.305ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_top'
+  Total number of paths / destination ports: 27 / 27
+-------------------------------------------------------------------------
+Offset:              2.957ns (Levels of Logic = 1)
+  Source:            reset_top (PAD)
+  Destination:       div/contador_0 (FF)
+  Destination Clock: clk_top rising
+
+  Data Path: reset_top to div/contador_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            33   1.222   1.305  reset_top_IBUF (reset_top_IBUF)
+     FDC:CLR                   0.430          div/contador_0
+    ----------------------------------------
+    Total                      2.957ns (1.652ns logic, 1.305ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ffd1/nq'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            ffd2/q (FF)
+  Destination:       c_top<2> (PAD)
+  Source Clock:      ffd1/nq rising
+
+  Data Path: ffd2/q to c_top<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.447   0.579  ffd2/q (ffd2/q)
+     OBUF:I->O                 2.571          c_top_2_OBUF (c_top<2>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ffd0/nq'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            ffd1/q (FF)
+  Destination:       c_top<1> (PAD)
+  Source Clock:      ffd0/nq rising
+
+  Data Path: ffd1/q to c_top<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.447   0.579  ffd1/q (ffd1/q)
+     OBUF:I->O                 2.571          c_top_1_OBUF (c_top<1>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'div/pulso'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            ffd0/q (FF)
+  Destination:       c_top<0> (PAD)
+  Source Clock:      div/pulso rising
+
+  Data Path: ffd0/q to c_top<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.447   0.579  ffd0/q (ffd0/q)
+     OBUF:I->O                 2.571          c_top_0_OBUF (c_top<0>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_top'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.701ns (Levels of Logic = 1)
+  Source:            div/pulso (FF)
+  Destination:       pulso_top (PAD)
+  Source Clock:      clk_top rising
+
+  Data Path: div/pulso to pulso_top
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.447   0.683  div/pulso (div/pulso)
+     OBUF:I->O                 2.571          pulso_top_OBUF (pulso_top)
+    ----------------------------------------
+    Total                      3.701ns (3.018ns logic, 0.683ns route)
+                                       (81.6% logic, 18.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_top
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_top        |    3.964|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock div/pulso
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+div/pulso      |    2.016|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ffd0/nq
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ffd0/nq        |    2.016|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ffd1/nq
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ffd1/nq        |    1.950|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.97 secs
+ 
+--> 
+
+Total memory usage is 4486456 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
