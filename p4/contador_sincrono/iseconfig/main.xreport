@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2026-10-16T08:14:55</DateModified>
+  <DateModified>2026-10-20T07:59:26</DateModified>
   <ModuleName>main</ModuleName>
   <SummaryTimeStamp>2026-10-16T07:45:52</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/ESCOM/Desktop/practicas_dsd-main/p4/contador_sincrono/iseconfig/main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/ESCOM/Desktop/practicas_dsd-main/p4/contador_sincrono</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/ESCOM/Desktop/practicas_dsd-main/practicas_dsd-main/p4/contador_sincrono/iseconfig/main.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/ESCOM/Desktop/practicas_dsd-main/practicas_dsd-main/p4/contador_sincrono\</ImplementationReportsDirectory>
   <DateInitialized>2026-10-16T07:25:14</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

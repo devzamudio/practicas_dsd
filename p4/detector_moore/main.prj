@@ -1,0 +1,6 @@
+verilog work "flipflop_t.v"
+verilog work "flipflop_jk.v"
+verilog work "ec_ex.v"
+verilog work "divisor.v"
+verilog work "comb.v"
+verilog work "main.v"

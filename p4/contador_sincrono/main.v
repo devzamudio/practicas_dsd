@@ -23,10 +23,17 @@ module main(
 	input reset_top,
 	input x_top,
 	output wire [1:0] q_top,
-	output wire [1:0] nq_top
+	output wire [1:0] nq_top,
+	output wire pulso_top
     );
 	 
 wire [1:0] d_top;
+
+divisor div (
+	.clk(clk_top),
+	.reset(reset_top),
+	.pulso(pulso_top)
+);
 
 ec_ex ec_ex (
 	.x(x_top),
@@ -35,7 +42,7 @@ ec_ex ec_ex (
 );
 
 flipflop_d ffd0 (
-	.clk(clk_top),
+	.clk(pulso_top),
 	.reset(reset_top),
 	.d(d_top[0]),
 	.q(q_top[0]),
@@ -43,7 +50,7 @@ flipflop_d ffd0 (
 );
 
 flipflop_d ffd1 (
-	.clk(clk_top),
+	.clk(pulso_top),
 	.reset(reset_top),
 	.d(d_top[1]),
 	.q(q_top[1]),

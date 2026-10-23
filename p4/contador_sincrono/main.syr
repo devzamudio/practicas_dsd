@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: main.prj
 
@@ -105,48 +105,58 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\ESCOM\Desktop\practicas_dsd-main\p4\contador_sincrono\flipflop_d.v" into library work
+Analyzing Verilog file "C:\Users\ESCOM\Desktop\practicas_dsd-main\practicas_dsd-main\p4\contador_sincrono\flipflop_d.v" into library work
 Parsing module <flipflop_d>.
-Analyzing Verilog file "C:\Users\ESCOM\Desktop\practicas_dsd-main\p4\contador_sincrono\ec_ex.v" into library work
+Analyzing Verilog file "C:\Users\ESCOM\Desktop\practicas_dsd-main\practicas_dsd-main\p4\contador_sincrono\ec_ex.v" into library work
 Parsing module <ec_ex>.
-Analyzing Verilog file "C:\Users\ESCOM\Desktop\practicas_dsd-main\p4\contador_sincrono\main.v" into library work
+Analyzing Verilog file "C:\Users\ESCOM\Desktop\practicas_dsd-main\practicas_dsd-main\p4\contador_sincrono\divisor.v" into library work
+Parsing module <divisor>.
+Analyzing Verilog file "C:\Users\ESCOM\Desktop\practicas_dsd-main\practicas_dsd-main\p4\contador_sincrono\main.v" into library work
 Parsing module <main>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "C:\Users\ESCOM\Desktop\practicas_dsd-main\p4\contador_sincrono\main.v" Line 37: Port preset is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:\Users\ESCOM\Desktop\practicas_dsd-main\p4\contador_sincrono\main.v" Line 45: Port preset is not connected to this instance
 
 Elaborating module <main>.
+
+Elaborating module <divisor>.
+WARNING:HDLCompiler:413 - "C:\Users\ESCOM\Desktop\practicas_dsd-main\practicas_dsd-main\p4\contador_sincrono\divisor.v" Line 40: Result of 27-bit expression is truncated to fit in 26-bit target.
 
 Elaborating module <ec_ex>.
 
 Elaborating module <flipflop_d>.
-WARNING:HDLCompiler:552 - "C:\Users\ESCOM\Desktop\practicas_dsd-main\p4\contador_sincrono\main.v" Line 37: Input port preset is not connected on this instance
-WARNING:HDLCompiler:552 - "C:\Users\ESCOM\Desktop\practicas_dsd-main\p4\contador_sincrono\main.v" Line 45: Input port preset is not connected on this instance
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <main>.
-    Related source file is "C:\Users\ESCOM\Desktop\practicas_dsd-main\p4\contador_sincrono\main.v".
-WARNING:Xst:2898 - Port 'preset', unconnected in block instance 'ffd0', is tied to GND.
-WARNING:Xst:2898 - Port 'preset', unconnected in block instance 'ffd1', is tied to GND.
+    Related source file is "C:\Users\ESCOM\Desktop\practicas_dsd-main\practicas_dsd-main\p4\contador_sincrono\main.v".
     Summary:
 	no macro.
 Unit <main> synthesized.
 
+Synthesizing Unit <divisor>.
+    Related source file is "C:\Users\ESCOM\Desktop\practicas_dsd-main\practicas_dsd-main\p4\contador_sincrono\divisor.v".
+    Found 26-bit register for signal <contador>.
+    Found 1-bit register for signal <pulso>.
+    Found 26-bit adder for signal <contador[25]_GND_2_o_add_1_OUT> created at line 40.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <divisor> synthesized.
+
 Synthesizing Unit <ec_ex>.
-    Related source file is "C:\Users\ESCOM\Desktop\practicas_dsd-main\p4\contador_sincrono\ec_ex.v".
+    Related source file is "C:\Users\ESCOM\Desktop\practicas_dsd-main\practicas_dsd-main\p4\contador_sincrono\ec_ex.v".
     Summary:
 Unit <ec_ex> synthesized.
 
 Synthesizing Unit <flipflop_d>.
-    Related source file is "C:\Users\ESCOM\Desktop\practicas_dsd-main\p4\contador_sincrono\flipflop_d.v".
-    Found 1-bit register for signal <q>.
+    Related source file is "C:\Users\ESCOM\Desktop\practicas_dsd-main\practicas_dsd-main\p4\contador_sincrono\flipflop_d.v".
     Found 1-bit register for signal <nq>.
+    Found 1-bit register for signal <q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
 Unit <flipflop_d> synthesized.
@@ -155,8 +165,13 @@ Unit <flipflop_d> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 4
- 1-bit register                                        : 4
+# Adders/Subtractors                                   : 1
+ 26-bit adder                                          : 1
+# Registers                                            : 6
+ 1-bit register                                        : 5
+ 26-bit register                                       : 1
+# Multiplexers                                         : 1
+ 26-bit 2-to-1 multiplexer                             : 1
 # Xors                                                 : 2
  1-bit xor2                                            : 2
 
@@ -167,12 +182,18 @@ Macro Statistics
 =========================================================================
 
 
+Synthesizing (advanced) Unit <divisor>.
+The following registers are absorbed into counter <contador>: 1 register on signal <contador>.
+Unit <divisor> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 4
- Flip-Flops                                            : 4
+# Counters                                             : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 5
+ Flip-Flops                                            : 5
 # Xors                                                 : 2
  1-bit xor2                                            : 2
 
@@ -194,8 +215,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 4
- Flip-Flops                                            : 4
+# Registers                                            : 31
+ Flip-Flops                                            : 31
 
 =========================================================================
 
@@ -218,16 +239,23 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 4
-#      LUT2                        : 4
-# FlipFlops/Latches                : 4
-#      FDC                         : 2
+# BELS                             : 116
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 25
+#      LUT2                        : 31
+#      LUT6                        : 6
+#      MUXCY                       : 25
+#      VCC                         : 1
+#      XORCY                       : 26
+# FlipFlops/Latches                : 31
+#      FDC                         : 29
 #      FDP                         : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 6
+# IO Buffers                       : 7
 #      IBUF                        : 2
-#      OBUF                        : 4
+#      OBUF                        : 5
 
 Device utilization summary:
 ---------------------------
@@ -236,20 +264,20 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:               4  out of  18224     0%  
- Number of Slice LUTs:                    4  out of   9112     0%  
-    Number used as Logic:                 4  out of   9112     0%  
+ Number of Slice Registers:              31  out of  18224     0%  
+ Number of Slice LUTs:                   63  out of   9112     0%  
+    Number used as Logic:                63  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      8
-   Number with an unused Flip Flop:       4  out of      8    50%  
-   Number with an unused LUT:             4  out of      8    50%  
-   Number of fully used LUT-FF pairs:     0  out of      8     0%  
-   Number of unique control sets:         1
+ Number of LUT Flip Flop pairs used:     63
+   Number with an unused Flip Flop:      32  out of     63    50%  
+   Number with an unused LUT:             0  out of     63     0%  
+   Number of fully used LUT-FF pairs:    31  out of     63    49%  
+   Number of unique control sets:         2
 
 IO Utilization: 
- Number of IOs:                           7
- Number of bonded IOBs:                   7  out of    232     3%  
+ Number of IOs:                           8
+ Number of bonded IOBs:                   8  out of    232     3%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -275,8 +303,10 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk_top                            | BUFGP                  | 4     |
+div/pulso                          | NONE(ffd1/q)           | 4     |
+clk_top                            | BUFGP                  | 27    |
 -----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -286,9 +316,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 1.405ns (Maximum Frequency: 711.617MHz)
-   Minimum input arrival time before clock: 2.335ns
-   Maximum output required time after clock: 3.668ns
+   Minimum period: 3.964ns (Maximum Frequency: 252.296MHz)
+   Minimum input arrival time before clock: 2.929ns
+   Maximum output required time after clock: 3.762ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -296,54 +326,97 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk_top'
-  Clock period: 1.405ns (frequency: 711.617MHz)
+Timing constraint: Default period analysis for Clock 'div/pulso'
+  Clock period: 1.507ns (frequency: 663.460MHz)
   Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
-Delay:               1.405ns (Levels of Logic = 1)
+Delay:               1.507ns (Levels of Logic = 1)
   Source:            ffd0/q (FF)
-  Destination:       ffd1/nq (FF)
+  Destination:       ffd1/q (FF)
+  Source Clock:      div/pulso rising
+  Destination Clock: div/pulso rising
+
+  Data Path: ffd0/q to ffd1/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.447   0.755  ffd0/q (ffd0/q)
+     LUT2:I0->O            1   0.203   0.000  ec_ex/x_q[0]_XOR_34_o1 (ec_ex/x_q[0]_XOR_34_o)
+     FDP:D                     0.102          ffd1/nq
+    ----------------------------------------
+    Total                      1.507ns (0.752ns logic, 0.755ns route)
+                                       (49.9% logic, 50.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_top'
+  Clock period: 3.964ns (frequency: 252.296MHz)
+  Total number of paths / destination ports: 1054 / 27
+-------------------------------------------------------------------------
+Delay:               3.964ns (Levels of Logic = 3)
+  Source:            div/contador_8 (FF)
+  Destination:       div/contador_12 (FF)
   Source Clock:      clk_top rising
   Destination Clock: clk_top rising
 
-  Data Path: ffd0/q to ffd1/nq
+  Data Path: div/contador_8 to div/contador_12
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.447   0.651  ffd0/q (ffd0/q)
-     LUT2:I1->O            1   0.205   0.000  ec_ex/x_q[0]_XOR_2_o1 (ec_ex/x_q[0]_XOR_2_o)
-     FDP:D                     0.102          ffd1/nq
+     FDC:C->Q              2   0.447   0.981  div/contador_8 (div/contador_8)
+     LUT6:I0->O            2   0.203   0.864  div/GND_2_o_GND_2_o_equal_1_o<25>4 (div/GND_2_o_GND_2_o_equal_1_o<25>3)
+     LUT6:I2->O           14   0.203   0.958  div/GND_2_o_GND_2_o_equal_1_o<25>5 (div/GND_2_o_GND_2_o_equal_1_o)
+     LUT2:I1->O            1   0.205   0.000  div/Mcount_contador_eqn_251 (div/Mcount_contador_eqn_25)
+     FDC:D                     0.102          div/contador_25
     ----------------------------------------
-    Total                      1.405ns (0.754ns logic, 0.651ns route)
-                                       (53.7% logic, 46.3% route)
+    Total                      3.964ns (1.160ns logic, 2.804ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'div/pulso'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.929ns (Levels of Logic = 1)
+  Source:            reset_top (PAD)
+  Destination:       ffd1/q (FF)
+  Destination Clock: div/pulso rising
+
+  Data Path: reset_top to ffd1/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            31   1.222   1.277  reset_top_IBUF (reset_top_IBUF)
+     FDP:PRE                   0.430          ffd1/nq
+    ----------------------------------------
+    Total                      2.929ns (1.652ns logic, 1.277ns route)
+                                       (56.4% logic, 43.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_top'
-  Total number of paths / destination ports: 8 / 8
+  Total number of paths / destination ports: 27 / 27
 -------------------------------------------------------------------------
-Offset:              2.335ns (Levels of Logic = 1)
+Offset:              2.929ns (Levels of Logic = 1)
   Source:            reset_top (PAD)
-  Destination:       ffd1/nq (FF)
+  Destination:       div/contador_0 (FF)
   Destination Clock: clk_top rising
 
-  Data Path: reset_top to ffd1/nq
+  Data Path: reset_top to div/contador_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   1.222   0.683  reset_top_IBUF (reset_top_IBUF)
-     FDP:PRE                   0.430          ffd1/nq
+     IBUF:I->O            31   1.222   1.277  reset_top_IBUF (reset_top_IBUF)
+     FDC:CLR                   0.430          div/contador_0
     ----------------------------------------
-    Total                      2.335ns (1.652ns logic, 0.683ns route)
-                                       (70.8% logic, 29.2% route)
+    Total                      2.929ns (1.652ns logic, 1.277ns route)
+                                       (56.4% logic, 43.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_top'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'div/pulso'
   Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
 Offset:              3.668ns (Levels of Logic = 1)
   Source:            ffd1/q (FF)
   Destination:       q_top<1> (PAD)
-  Source Clock:      clk_top rising
+  Source Clock:      div/pulso rising
 
   Data Path: ffd1/q to q_top<1>
                                 Gate     Net
@@ -356,6 +429,25 @@ Offset:              3.668ns (Levels of Logic = 1)
                                        (82.3% logic, 17.7% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_top'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.762ns (Levels of Logic = 1)
+  Source:            div/pulso (FF)
+  Destination:       pulso_top (PAD)
+  Source Clock:      clk_top rising
+
+  Data Path: div/pulso to pulso_top
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.447   0.744  div/pulso (div/pulso)
+     OBUF:I->O                 2.571          pulso_top_OBUF (pulso_top)
+    ----------------------------------------
+    Total                      3.762ns (3.018ns logic, 0.744ns route)
+                                       (80.2% logic, 19.8% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
@@ -365,20 +457,28 @@ Clock to Setup on destination clock clk_top
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_top        |    1.405|         |         |         |
+clk_top        |    3.964|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock div/pulso
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+div/pulso      |    1.507|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.01 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.14 secs
  
 --> 
 
-Total memory usage is 4487036 kilobytes
+Total memory usage is 4486940 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

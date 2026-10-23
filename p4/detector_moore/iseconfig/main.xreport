@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2026-10-16T08:15:37</DateModified>
+  <DateModified>2026-10-20T08:13:01</DateModified>
   <ModuleName>main</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/ESCOM/Desktop/practicas_dsd-main/p4/detector_moore/iseconfig/main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/ESCOM/Desktop/practicas_dsd-main/p4/detector_moore</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/ESCOM/Desktop/practicas_dsd-main/practicas_dsd-main/p4/detector_moore/iseconfig/main.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/ESCOM/Desktop/practicas_dsd-main/practicas_dsd-main/p4/detector_moore\</ImplementationReportsDirectory>
   <DateInitialized>2026-10-16T08:01:34</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
